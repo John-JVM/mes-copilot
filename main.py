@@ -10,8 +10,7 @@ from middlewares.jwt_middleware import JWTMiddleware
 
 # 로깅 설정
 logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
 )
 logger = logging.getLogger(__name__)
 
@@ -45,3 +44,6 @@ app.include_router(weather_router)
 @app.get("/")
 def read_root():
     return {"message": "MES Copilot API is running"}
+
+
+unused_var = 10
